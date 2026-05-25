@@ -1,0 +1,6 @@
+{
+  "name": "HoloHair AI",
+  "description": "AI hairstyle recommendation app with React, Vite, Express, and an optional Python Flask runner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
