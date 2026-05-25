@@ -451,7 +451,12 @@ export default function App() {
   );
 }
 
-function PreferenceGroup({ label, children }: { label: string; children: React.ReactNode }) {
+type PreferenceGroupProps = {
+  label: string;
+  children: React.ReactNode;
+};
+
+function PreferenceGroup({ label, children }: PreferenceGroupProps) {
   return (
     <div className="mb-5">
       <div className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-stone-500">{label}</div>
@@ -460,15 +465,13 @@ function PreferenceGroup({ label, children }: { label: string; children: React.R
   );
 }
 
-function SegmentButton({
-  active,
-  children,
-  onClick,
-}: {
+type SegmentButtonProps = {
   active: boolean;
   children: React.ReactNode;
   onClick: () => void;
-}) {
+};
+
+const SegmentButton: React.FC<SegmentButtonProps> = ({ active, children, onClick }) => {
   return (
     <button
       type="button"
@@ -482,7 +485,7 @@ function SegmentButton({
       {children}
     </button>
   );
-}
+};
 
 function InfoBlock({ title, value }: { title: string; value: string }) {
   return (
